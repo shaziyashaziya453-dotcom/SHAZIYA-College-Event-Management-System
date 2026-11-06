@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAZIYA | Event Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">SHAZIYA<span>.</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="events.html">Events</a>
+        </nav>
+        <a href="#manage" class="nav-btn">Add an Event</a>
+    </header>
+
+    <section class="events-page-heading">
+        <p class="small-title">SHAZIYA EVENT CENTER</p>
+        <h1>Explore & Manage Events</h1>
+        <p class="hero-description">View complete event information and manage your college programs.</p>
+    </section>
+
+    <section class="manage" id="manage">
+        <p class="small-title">EVENT OVERVIEW</p>
+        <h2>Event Dashboard</h2>
+        <div class="dashboard">
+            <div class="stat-card">
+                <span>Total Events</span>
+                <h3 id="totalEvents">0</h3>
+            </div>
+            <div class="stat-card">
+                <span>Sports Events</span>
+                <h3 id="sportsEvents">0</h3>
+            </div>
+            <div class="stat-card">
+                <span>Cultural Events</span>
+                <h3 id="culturalEvents">0</h3>
+            </div>
+        </div>
+
+        <div class="event-form">
+            <h3 id="formTitle">Add New Event</h3>
+            <form id="eventForm">
+                <input type="hidden" id="eventId">
+                <div class="form-grid">
+                    <input type="text" id="eventName" placeholder="Event Name" required>
+                    <select id="eventType" required>
+                        <option value="">Select Event Type</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Cultural">Cultural</option>
+                    </select>
+                    <input type="date" id="eventDate" required>
+                    <input type="text" id="eventMenu" placeholder="Event Menu / Activities">
+                </div>
+                <textarea id="eventDescription" placeholder="Event Description" rows="4"></textarea>
+                <button type="submit" class="main-btn">Save Event</button>
+                <button type="button" id="cancelEdit" class="cancel-btn" hidden>Cancel Edit</button>
+            </form>
+        </div>
+
+        <div class="event-list">
+            <h3>All Event Details</h3>
+            <div class="search-box">
+                <input type="text" id="searchEvent" placeholder="Search events...">
+            </div>
+            <div id="eventList"><p>Loading events...</p></div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>SHAZIYA<span>.</span></h2>
+        <p><a href="index.html" style="color:var(--gold);">← Back to Home</a></p>
+        <p>© 2026 SHAZIYA. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
